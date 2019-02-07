@@ -4,45 +4,6 @@
 
 <div fxLayout="row">
   <div fxFlex="80" fxFlexOffset="10">
-    <div class="choices">
-      <div *ngFor="let item of questions.question">
-
-                    <span>
-                <p *ngIf="item.type === 'paragraph'">
-                    {{item.value}}
-                </p>
-                <img *ngIf="item.type === 'image'" [src]="item.value">
-            </span>
-      </div>
-      <ul>
-        <li class="option" tappable #optionA (click)="chooseAnswer(0, optionA)">
-          <div *ngFor="let item of questions.option_a">
-            <p *ngIf="item.type === 'paragraph'">{{item.value}}</p>
-            <img *ngIf="item.type === 'image'" [src]="item.value">
-          </div>
-        </li>
-
-        <li class="option" tappable #optionB (click)="chooseAnswer(1, optionB)">
-          <div *ngFor="let item of questions.option_b">
-            <p *ngIf="item.type === 'paragraph'">{{item.value}}</p>
-            <img *ngIf="item.type === 'image'" [src]="item.value">
-          </div>
-        </li>
-
-        <li class="option" tappable #optionC (click)="chooseAnswer(2, optionC)">
-          <div *ngFor="let item of questions.option_c">
-            <p *ngIf="item.type === 'paragraph'">{{item.value}}</p>
-            <img *ngIf="item.type === 'image'" [src]="item.value">
-          </div>
-        </li>
-
-        <li class="option" tappable #optionD (click)="chooseAnswer(3, optionD)">
-          <div *ngFor="let item of questions.option_d">
-            <p *ngIf="item.type === 'paragraph'">{{item.value}}</p>
-            <img *ngIf="item.type === 'image'" [src]="item.value">
-          </div>
-        </li>
-      </ul>
-    </div>
+    <app-question [questions$]="questions$"></app-question>
   </div>
 </div>

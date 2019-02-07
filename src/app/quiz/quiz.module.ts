@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {QuizComponent} from './quiz.component';
 import {MatButtonModule, MatListModule, MatToolbarModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {QuestionComponent} from './question/question.component';
 
 const routes: Routes =  [
   {
@@ -13,7 +14,7 @@ const routes: Routes =  [
 ];
 
 @NgModule({
-  declarations: [QuizComponent],
+  declarations: [QuizComponent, QuestionComponent],
   exports: [QuizComponent, RouterModule],
   imports: [
     CommonModule,

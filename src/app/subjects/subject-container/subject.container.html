@@ -1,9 +1,12 @@
 <div fxLayout="row">
   <div fxFlexOffset="20" fxFlex="60">
     <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="24px">
-      <div fxFlex="20" >
-        <mat-card  style="margin-top: 24px;" routerLink="amharic/quiz">
-          <img mat-card-image [src]="'/assets/images/amharic.png'">
+      <div fxFlex="20" *ngFor="let subject of subjects$ | async">
+        <mat-card  style="margin-top: 24px; cursor: pointer;" routerLink="{{subject?.id}}/quiz">
+          <img mat-card-image [src]="subject?.photo_path">
+          <mat-card-actions>
+            <div style="text-align: center; text-transform: capitalize;">{{subject?.title}}</div>
+          </mat-card-actions>
         </mat-card>
       </div>
     </div>
