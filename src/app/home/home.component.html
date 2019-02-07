@@ -1,0 +1,23 @@
+<div fxLayout="row" style="margin-top: 24px;">
+  <div fxFlex="40"></div>
+  <div fxFlex style="text-align: center;">
+    <img [src]="'/assets/logo.text.svg'" alt="" style="width: 100%;">
+    <h3 style="color: #22af83; text-transform: capitalize;">please select your grade</h3>
+  </div>
+  <div fxFlex="40"></div>
+</div>
+
+<div fxLayout="row" style="margin-top: 64px;">
+  <div fxFlex></div>
+  <div fxFlex>
+    <p *ngFor="let button of buttons">
+      <button
+              mat-stroked-button
+              (click)="selectGrade(button)"
+              style="width: 100%; font-size: 2rem; padding-top: 16px; padding-bottom: 16px;" color="primary">
+        {{button}}
+      </button>
+    </p>
+  </div>
+  <div fxFlex></div>
+</div>

@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  Select Science Type
+</mat-toolbar>
+
+<div fxLayout="column" style="padding: 24px">
+  <div fxFlexFill [formGroup]="scienceForm">
+    <mat-radio-group formControlName="scienceControl">
+      <mat-radio-button value="natural" color="primary">Natural Science</mat-radio-button>
+      <br>
+      <br>
+      <mat-radio-button value="social" color="primary">Social Science</mat-radio-button>
+    </mat-radio-group>
+    <div fxLayout="row">
+      <div fxFlex fxLayoutAlign="end">
+        <button mat-raised-button color="primary" (click)="submit()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>

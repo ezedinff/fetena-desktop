@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## to build for windows
+
+electron-packager . --platform=win32
+This will generate a directory /angular-electron-win32-x64/ that contains the executable file.
+
+## to build fow mac os
+
+electron-packager . --platform=darwin
+This will generate a directory /angular-electron-darwin-x64/ that contains the app. Zip it and extract it on a mac system and you should be able to run it natively. 
+
+  // "main": "main.js",
